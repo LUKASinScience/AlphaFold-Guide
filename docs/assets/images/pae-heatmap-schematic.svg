@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" font-family="Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="800" height="480" rx="12" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
+  <text x="400" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#1f2328">PAE heatmap — schematic, not real data</text>
+  <text x="400" y="56" text-anchor="middle" font-size="13" fill="#57606a">dark = low expected error (confident) · light = high expected error (unreliable)</text>
+
+  <!-- LEFT grid: confident interface -->
+  <g transform="translate(90,90)">
+    <text x="130" y="-14" text-anchor="middle" font-size="15" font-weight="600" fill="#1f2328">Confident domain packing</text>
+    <!-- 4 blocks, 130x130 each split into 2x2 of 65 -->
+    <g stroke="#ffffff" stroke-width="2">
+      <rect x="0"   y="0"   width="130" height="130" fill="#0B3D91"/> <!-- A-A diagonal -->
+      <rect x="130" y="130" width="130" height="130" fill="#0B3D91"/> <!-- B-B diagonal -->
+      <rect x="130" y="0"   width="130" height="130" fill="#2F6FCB"/> <!-- A-B confident -->
+      <rect x="0"   y="130" width="130" height="130" fill="#2F6FCB"/> <!-- B-A confident -->
+    </g>
+    <rect x="0" y="0" width="260" height="260" fill="none" stroke="#1f2328" stroke-width="1.5"/>
+    <line x1="130" y1="0" x2="130" y2="260" stroke="#1f2328" stroke-width="1"/>
+    <line x1="0" y1="130" x2="260" y2="130" stroke="#1f2328" stroke-width="1"/>
+    <text x="-14" y="70"  font-size="13" fill="#57606a" text-anchor="middle" transform="rotate(-90,-14,70)">domain A</text>
+    <text x="-14" y="200" font-size="13" fill="#57606a" text-anchor="middle" transform="rotate(-90,-14,200)">domain B</text>
+    <text x="65"  y="278" font-size="13" fill="#57606a" text-anchor="middle">domain A</text>
+    <text x="195" y="278" font-size="13" fill="#57606a" text-anchor="middle">domain B</text>
+    <text x="130" y="320" font-size="13" font-weight="600" fill="#1f2328" text-anchor="middle">→ trust this orientation</text>
+  </g>
+
+  <!-- RIGHT grid: uncertain interface -->
+  <g transform="translate(480,90)">
+    <text x="130" y="-14" text-anchor="middle" font-size="15" font-weight="600" fill="#1f2328">Uncertain domain packing</text>
+    <g stroke="#ffffff" stroke-width="2">
+      <rect x="0"   y="0"   width="130" height="130" fill="#0B3D91"/> <!-- A-A diagonal, still confident -->
+      <rect x="130" y="130" width="130" height="130" fill="#0B3D91"/> <!-- B-B diagonal, still confident -->
+      <rect x="130" y="0"   width="130" height="130" fill="#EAF2FB"/> <!-- A-B uncertain -->
+      <rect x="0"   y="130" width="130" height="130" fill="#EAF2FB"/> <!-- B-A uncertain -->
+    </g>
+    <rect x="0" y="0" width="260" height="260" fill="none" stroke="#1f2328" stroke-width="1.5"/>
+    <line x1="130" y1="0" x2="130" y2="260" stroke="#1f2328" stroke-width="1"/>
+    <line x1="0" y1="130" x2="260" y2="130" stroke="#1f2328" stroke-width="1"/>
+    <text x="-14" y="70"  font-size="13" fill="#57606a" text-anchor="middle" transform="rotate(-90,-14,70)">domain A</text>
+    <text x="-14" y="200" font-size="13" fill="#57606a" text-anchor="middle" transform="rotate(-90,-14,200)">domain B</text>
+    <text x="65"  y="278" font-size="13" fill="#57606a" text-anchor="middle">domain A</text>
+    <text x="195" y="278" font-size="13" fill="#57606a" text-anchor="middle">domain B</text>
+    <text x="130" y="320" font-size="13" font-weight="600" fill="#1f2328" text-anchor="middle">→ pose is a guess</text>
+  </g>
+
+  <line x1="60" y1="452" x2="740" y2="452" stroke="#d0d7de" stroke-width="1"/>
+  <text x="400" y="472" text-anchor="middle" font-size="12" fill="#57606a">Both examples have equally high pLDDT within each domain — only PAE reveals the difference</text>
+</svg>

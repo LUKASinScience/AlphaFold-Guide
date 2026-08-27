@@ -1,0 +1,118 @@
+/* Shared styling for this guide's small interactive widgets (self-check quiz, decision helpers). */
+
+.af-widget {
+  border: 1px solid var(--md-default-fg-color--lightest, #ddd);
+  background: var(--md-code-bg-color, rgba(127,127,127,.05));
+  border-radius: .4rem;
+  padding: 1rem 1.25rem 1.25rem;
+  margin: 1.5rem 0;
+}
+.af-widget-lead {
+  margin-top: 0;
+  font-weight: 600;
+}
+.af-widget-q { margin: 1rem 0; }
+.af-widget-question { font-weight: 600; margin-bottom: .4rem; }
+
+/* Radio-style questions (homepage self-check) */
+.af-widget-q label {
+  display: block;
+  font-weight: 400;
+  padding: .3rem .5rem;
+  border-radius: .25rem;
+  cursor: pointer;
+}
+.af-widget-q label:hover { background: var(--md-default-fg-color--lightest, rgba(127,127,127,.1)); }
+.af-widget-q input { margin-right: .5rem; }
+
+/* Buttons (submit, or decision-tree branch buttons) */
+.af-widget-btn {
+  margin: .25rem .5rem .25rem 0;
+  padding: .5rem 1rem;
+  border-radius: .3rem;
+  border: 1px solid var(--md-primary-fg-color, #4051b5);
+  background: var(--md-primary-fg-color, #4051b5);
+  color: var(--md-primary-bg-color, #fff);
+  font-weight: 600;
+  cursor: pointer;
+  font-size: .85rem;
+}
+.af-widget-btn:hover { opacity: .85; }
+.af-widget-btn-secondary {
+  background: transparent;
+  color: var(--md-primary-fg-color, #4051b5);
+}
+
+.af-widget-result {
+  margin-top: 1rem;
+  padding: .75rem 1rem;
+  border-radius: .3rem;
+  border-left: .25rem solid var(--md-accent-fg-color, #4051b5);
+  background: var(--md-default-bg-color, transparent);
+}
+.af-widget-result a { font-weight: 600; }
+.af-widget-result p:first-child { margin-top: 0; }
+.af-widget-result p:last-child { margin-bottom: 0; }
+
+/* Mol* example-protein viewer */
+.af-viewer-wrap {
+  margin: 1.5rem 0;
+  border: 1px solid var(--md-default-fg-color--lightest, #ddd);
+  border-radius: .4rem;
+  overflow: hidden;
+}
+.af-viewer {
+  position: relative;
+  width: 100%;
+  height: 560px;
+  background: #0d1117;
+}
+.md-typeset img.af-pae-img {
+  max-width: 320px;
+  width: 100%;
+  border: 1px solid var(--md-default-fg-color--lightest, #ddd);
+  border-radius: .3rem;
+  display: block;
+  margin: .75rem auto;
+}
+
+/* Confidence calculator sliders */
+.af-calc-row { margin: 1rem 0; }
+.af-calc-row label { display: block; margin-bottom: .4rem; font-weight: 600; }
+.af-calc-row input[type="range"] { width: 100%; accent-color: var(--md-primary-fg-color, #4051b5); }
+.af-calc-row input[type="checkbox"] { margin-right: .5rem; accent-color: var(--md-primary-fg-color, #4051b5); }
+#af-calc-result p { margin: .4rem 0; }
+
+.af-widget-step { display: none; }
+.af-widget-step.af-widget-step-active { display: block; }
+.af-widget-progress {
+  font-size: .8rem;
+  color: var(--md-default-fg-color--light, #666);
+  margin-bottom: .5rem;
+}
+
+/* Plugin showcase cards (Visualization Tools page) */
+.af-plugin-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.af-plugin-card {
+  flex: 1 1 260px;
+  border: 1px solid var(--md-default-fg-color--lightest, #ddd);
+  border-radius: .4rem;
+  padding: 1rem 1.25rem;
+  background: var(--md-code-bg-color, rgba(127,127,127,.05));
+}
+.af-plugin-card h3 { margin-top: .5rem; margin-bottom: .4rem; }
+.af-plugin-card p { margin: .4rem 0; font-size: .92rem; }
+.af-plugin-card img.af-plugin-logo,
+.af-plugin-card img.af-plugin-logo-small {
+  width: 140px;
+  height: 140px;
+  max-width: 140px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 190" font-family="Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="800" height="190" rx="12" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
+  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="700" fill="#1f2328">pLDDT — per-residue confidence (0–100)</text>
+
+  <!-- bar: 0-50 orange, 50-70 yellow, 70-90 light blue, 90-100 dark blue -->
+  <!-- bar x from 60 to 740 = 680px representing 0-100 -->
+  <g transform="translate(60,70)">
+    <rect x="0"   y="0" width="340" height="40" fill="#FF7D45"/>
+    <rect x="340" y="0" width="136" height="40" fill="#FFDB13"/>
+    <rect x="476" y="0" width="136" height="40" fill="#65CBF3"/>
+    <rect x="612" y="0" width="68"  height="40" fill="#0053D6"/>
+    <rect x="0" y="0" width="680" height="40" fill="none" stroke="#1f2328" stroke-width="1.5"/>
+
+    <!-- tick marks -->
+    <g stroke="#57606a" stroke-width="1">
+      <line x1="0"   y1="40" x2="0"   y2="48"/>
+      <line x1="340" y1="40" x2="340" y2="48"/>
+      <line x1="476" y1="40" x2="476" y2="48"/>
+      <line x1="612" y1="40" x2="612" y2="48"/>
+      <line x1="680" y1="40" x2="680" y2="48"/>
+    </g>
+    <g font-size="14" fill="#57606a" text-anchor="middle">
+      <text x="0"   y="64">0</text>
+      <text x="340" y="64">50</text>
+      <text x="476" y="64">70</text>
+      <text x="612" y="64">90</text>
+      <text x="680" y="64">100</text>
+    </g>
+
+    <!-- category labels -->
+    <g font-size="15" font-weight="600" text-anchor="middle">
+      <text x="170" y="-10" fill="#1f2328">Very low</text>
+      <text x="408" y="-10" fill="#1f2328">Low</text>
+      <text x="544" y="-10" fill="#1f2328">Confident</text>
+      <text x="646" y="-10" fill="#1f2328">Very high</text>
+    </g>
+  </g>
+
+  <text x="400" y="175" text-anchor="middle" font-size="13" fill="#57606a">&lt;50: probably wrong/disordered · 50–70: uncertain · 70–90: backbone mostly right · &gt;90: high precision</text>
+</svg>

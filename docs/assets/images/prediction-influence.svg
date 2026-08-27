@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" font-family="Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="800" height="300" rx="12" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
+  <text x="400" y="32" text-anchor="middle" font-size="18" font-weight="700" fill="#1f2328">What actually moves the predicted structure? (illustrative)</text>
+
+  <!-- chart area: bars from x=260 to x=740 = 480px = 100% -->
+  <g font-size="14" fill="#1f2328">
+    <!-- MSA / sequence context -->
+    <text x="250" y="88" text-anchor="end" font-weight="600">MSA / sequence context</text>
+    <rect x="260" y="68" width="440" height="34" fill="#2F6FCB"/>
+    <text x="710" y="90" fill="#1f2328">high</text>
+
+    <!-- Structural templates -->
+    <text x="250" y="148" text-anchor="end" font-weight="600">Structural templates</text>
+    <rect x="260" y="128" width="260" height="34" fill="#5B9BD5"/>
+    <text x="530" y="150" fill="#1f2328">medium</text>
+
+    <!-- Single point mutation -->
+    <text x="250" y="208" text-anchor="end" font-weight="600">Single point mutation</text>
+    <rect x="260" y="188" width="70" height="34" fill="#F2A65A"/>
+    <text x="340" y="210" fill="#1f2328">usually low *</text>
+  </g>
+
+  <line x1="260" y1="60" x2="260" y2="230" stroke="#57606a" stroke-width="1"/>
+  <text x="260" y="252" font-size="12" fill="#57606a" text-anchor="middle">0</text>
+  <text x="700" y="252" font-size="12" fill="#57606a" text-anchor="middle">high structural influence</text>
+
+  <text x="400" y="280" text-anchor="middle" font-size="12" fill="#57606a">* the backbone rarely moves much, but pLDDT can still shift — see caveat below</text>
+</svg>

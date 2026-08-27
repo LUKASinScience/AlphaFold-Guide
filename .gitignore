@@ -1,0 +1,14 @@
+# Zensical build output
+/site/
+
+# Python virtual environment
+.venv/
+__pycache__/
+*.pyc
+
+# OS cruft
+.DS_Store
+
+# Editor
+.vscode/
+.idea/

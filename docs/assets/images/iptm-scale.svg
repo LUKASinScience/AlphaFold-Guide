@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 190" font-family="Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="800" height="190" rx="12" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
+  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="700" fill="#1f2328">ipTM — interface confidence (0–1)</text>
+
+  <!-- bar x 60-740 = 680px representing 0-1 -->
+  <g transform="translate(60,70)">
+    <rect x="0"   y="0" width="408" height="40" fill="#E5484D"/>
+    <rect x="408" y="0" width="136" height="40" fill="#FFDB13"/>
+    <rect x="544" y="0" width="136" height="40" fill="#2DA44E"/>
+    <rect x="0" y="0" width="680" height="40" fill="none" stroke="#1f2328" stroke-width="1.5"/>
+
+    <g stroke="#57606a" stroke-width="1">
+      <line x1="0"   y1="40" x2="0"   y2="48"/>
+      <line x1="408" y1="40" x2="408" y2="48"/>
+      <line x1="544" y1="40" x2="544" y2="48"/>
+      <line x1="680" y1="40" x2="680" y2="48"/>
+    </g>
+    <g font-size="14" fill="#57606a" text-anchor="middle">
+      <text x="0"   y="64">0.0</text>
+      <text x="408" y="64">0.6</text>
+      <text x="544" y="64">0.8</text>
+      <text x="680" y="64">1.0</text>
+    </g>
+
+    <g font-size="15" font-weight="600" text-anchor="middle">
+      <text x="204" y="-10" fill="#1f2328">Likely unreliable</text>
+      <text x="476" y="-10" fill="#1f2328">Gray zone</text>
+      <text x="612" y="-10" fill="#1f2328">High confidence</text>
+    </g>
+  </g>
+
+  <text x="400" y="175" text-anchor="middle" font-size="13" fill="#57606a">Always cross-check against the interface-specific PAE block — a low aggregate score can hide a locally confident interface</text>
+</svg>

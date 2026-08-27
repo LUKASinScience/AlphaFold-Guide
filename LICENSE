@@ -1,0 +1,33 @@
+Lukas AlphaFold Guide
+Copyright (c) 2026 Lukas W. Bauer
+
+This work is licensed under the Creative Commons Attribution 4.0
+International License (CC BY 4.0).
+
+To view a copy of this license, visit:
+https://creativecommons.org/licenses/by/4.0/
+
+Full legal code:
+https://creativecommons.org/licenses/by/4.0/legalcode
+
+You are free to share and adapt this material for any purpose, even
+commercially, as long as you give appropriate credit, provide a link
+to the license, and indicate if changes were made.
+
+## Scope
+
+This license covers the original text, structure, custom diagrams
+(SVGs), stylesheets, and JavaScript authored for this guide, under
+docs/ (excluding the third-party assets listed below).
+
+It does NOT cover:
+
+- Quoted excerpts from external papers, GitHub issues, and training
+  material cited throughout this guide. Those remain the copyright of
+  their respective authors and are reproduced here under attribution /
+  short-quotation practice, with a source link at each use.
+- Data and images fetched from the AlphaFold Protein Structure Database
+  (EMBL-EBI / DeepMind), which carry their own CC BY 4.0 license — see
+  the "Data source & license" note on docs/example-protein.md.
+- The vendored Mol* viewer (docs/assets/molstar/), which is MIT-licensed
+  by its own authors — see THIRD_PARTY_NOTICES.md.
