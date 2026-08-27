@@ -12,3 +12,6 @@ __pycache__/
 # Editor
 .vscode/
 .idea/
+
+# Personal raw notes, not part of the built site
+/old_guides/

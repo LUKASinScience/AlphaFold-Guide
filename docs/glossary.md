@@ -13,7 +13,7 @@ Quick reference for every acronym and term used across this guide. Each entry li
 : A separate DeepMind model, built on AlphaFold2's architecture, that scores human missense variants for likely pathogenicity. See [What is AlphaMissense?](interpreting-results/alphamissense.md)
 
 **BFD** (Big Fantastic Database)
-: The largest of the sequence databases AlphaFold2/ColabFold search for MSA construction — dominates the ~2.5 TB database bundle size. See [Running ColabFold (local/HPC)](running-colabfold/hpc-and-local.md).
+: The largest of the sequence databases AlphaFold2/ColabFold search for MSA construction — dominates the ~2.6 TB database bundle size. See [Running ColabFold (local/HPC)](running-colabfold/hpc-and-local.md).
 
 **Evoformer**
 : AlphaFold2's central trunk network — 48 blocks jointly refining the MSA and pair representations. See [How AlphaFold Works](fundamentals/how-alphafold-works.md).

@@ -13,7 +13,7 @@ For decades, the standard way to guess what an unknown protein does was: align i
 
     This works beautifully for close relatives. It breaks down once sequences have diverged far enough — below roughly 20–25% pairwise identity, often called the **"twilight zone,"** alignment scores become statistically indistinguishable from chance. A huge fraction of "hypothetical protein, function unknown" entries in sequence databases sit exactly in or below this zone: real, functional proteins with no sequence-detectable relatives.
 
-    ![Illustrative chart showing sequence-alignment-based homology detection dropping off sharply below ~25% sequence identity (the twilight zone), while structure-based search stays useful much further down](../assets/images/detectability-chart.svg)
+    ![Illustrative chart showing sequence-alignment-based homology detection dropping off sharply below ~25% sequence identity (the twilight zone), while structure-based search stays useful much further down](../assets/images/detectability-chart.svg){ .af-diagram-svg }
 
 ## Structure is conserved long after sequence isn't
 
@@ -67,5 +67,8 @@ For decades, the standard way to guess what an unknown protein does was: align i
 
     !!! warning "Crop a real domain, not a single secondary-structure element"
         Don't crop down to just one helix or one sheet before searching. A single α-helix or β-strand is a generic building block that fits into an enormous number of unrelated folds — searching with one all but guarantees noisy, uninformative hits. Crop a **complete structural domain** (typically dozens to a few hundred well-folded residues, forming a self-contained fold) — small enough to exclude flexible/disordered material, but large enough to actually encode a distinctive fold. This is the same principle behind ChopChopMF's own crop-before-Foldseek guidance in the [Workflows](../chopchopmf/workflows.md) page.
+
+    !!! example "Worked example: cropping BRCA1's own rigid domain"
+        The protein from [Try It: A Real Example Protein](../example-protein.md) makes steps 2–3 concrete rather than abstract. BRCA1 (UniProt [P38398](https://www.uniprot.org/uniprotkb/P38398)) is ~80% low-pLDDT/disordered, but its C-terminal **tandem BRCT domain** (residues 1642–1855 — the single dark block in the real PAE plot on that page) is a genuinely rigid, well-folded unit worth cropping and searching. Note this isn't a zero-sequence-similarity case like chymotrypsin/subtilisin above — BRCT is a well-characterized, sequence-detectable Pfam domain that recurs (with real, if sometimes distant, sequence homology) across other DNA-damage-response proteins such as 53BP1, MDC1 and TopBP1. It's included here as a concrete illustration of *cropping a real rigid domain before a structure search*, on the exact protein already shown elsewhere in this guide — not as a second convergent-evolution example.
 
 Continue to [Reading Confidence Metrics →](../interpreting-results/confidence-metrics.md)

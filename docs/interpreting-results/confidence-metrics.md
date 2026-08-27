@@ -114,9 +114,9 @@ AlphaFold and ColabFold don't just give you a structure — they give you an est
     | 50–70 | Low | Uncertain — interpret with caution |
     | < 50 | Very low | Probably wrong; often disordered |
 
-    ![Horizontal pLDDT confidence scale from 0 to 100, colored orange below 50, yellow 50-70, light blue 70-90, dark blue above 90](../assets/images/plddt-scale.svg)
+    ![Horizontal pLDDT confidence scale from 0 to 100, colored orange below 50, yellow 50-70, light blue 70-90, dark blue above 90](../assets/images/plddt-scale.svg){ .af-diagram-svg }
 
-    Low-pLDDT stretches are frequently **intrinsically disordered regions (IDRs)** — parts of the protein with no single fixed structure — or simply regions where AlphaFold didn't have enough evolutionary information to work with (e.g. flexible linkers between domains).
+    Low-pLDDT stretches are frequently **intrinsically disordered regions (IDRs)** — parts of the protein with no single fixed structure — or simply regions where AlphaFold didn't have enough evolutionary information to work with (e.g. flexible linkers between domains). See these exact bands on a real protein in [Try It: A Real Example Protein](../example-protein.md) — 80% of BRCA1 is "very low," and that's not a failed prediction.
 
 ??? tip "Advanced"
     pLDDT is computed from four binary distance-agreement tests at increasingly strict thresholds (4 Å, 2 Å, 1 Å, 0.5 Å) between predicted and (during training) true inter-atomic distances; the reported score is essentially the average pass rate across those thresholds. In **AlphaFold3**, pLDDT becomes a **per-atom** score computed for every molecule type (proteins, nucleic acids, ligands) rather than only per-residue for proteins.
@@ -141,7 +141,9 @@ AlphaFold and ColabFold don't just give you a structure — they give you an est
 
     The diagonal is always dark (a residue compared to itself) — ignore it. What matters are the **off-diagonal blocks**: a dark block between residue ranges of two domains (or two chains in a complex) means AlphaFold is confident about how they're positioned *relative to each other*. A light block means that relative placement is essentially a guess.
 
-    ![Schematic comparison of two PAE heatmaps: one with a dark, confident off-diagonal block between two domains, one with a light, uncertain off-diagonal block despite both domains individually being well-folded](../assets/images/pae-heatmap-schematic.svg)
+    ![Schematic comparison of two PAE heatmaps: one with a dark, confident off-diagonal block between two domains, one with a light, uncertain off-diagonal block despite both domains individually being well-folded](../assets/images/pae-heatmap-schematic.svg){ .af-diagram-svg }
+
+    For what this looks like on an actual entry — a single small confident block against an otherwise uniformly light background — see the [real PAE plot for BRCA1](../example-protein.md).
 
 !!! question "Why do I need PAE if I already have pLDDT?"
     Because they answer genuinely different questions, and pLDDT structurally *cannot* answer the one PAE answers. pLDDT is purely local — it's telling you "is residue N's own immediate environment modeled correctly," one residue at a time. It has no mechanism for expressing "domain A and domain B are each folded perfectly, but I have no idea how they're rotated relative to each other" — and that exact situation is common. A structure can show **uniformly high pLDDT in two well-folded domains while PAE reveals their relative orientation is essentially random.** This is the single most common way people over-trust a multi-domain or multimeric prediction: they see a confident-blue cartoon, and stop looking. Any claim about how two domains or two chains sit *relative to each other* needs the corresponding **off-diagonal PAE block** — pLDDT alone cannot tell you.
@@ -174,7 +176,9 @@ AlphaFold and ColabFold don't just give you a structure — they give you an est
     | 0.6 – 0.8 | Gray zone — could go either way, look closer |
     | < 0.6 | Likely unreliable |
 
-    ![Horizontal ipTM confidence scale from 0 to 1, colored red below 0.6, yellow 0.6-0.8, green above 0.8](../assets/images/iptm-scale.svg)
+    ![Horizontal ipTM confidence scale from 0 to 1, colored red below 0.6, yellow 0.6-0.8, green above 0.8](../assets/images/iptm-scale.svg){ .af-diagram-svg }
+
+    BRCA1 on the [example page](../example-protein.md) is a single chain, not a complex — which is exactly why it has no ipTM at all: the score only exists for multi-chain predictions.
 
 !!! tip "Advanced: don't stop at the single number"
     - pTM can be **dominated by a large subunit** in complexes with very unequal chain sizes, masking a poorly predicted small partner — always sanity check the small chain's own pLDDT/PAE too.
@@ -215,6 +219,9 @@ flowchart TD
     J -->|"0.6-0.8"| K[Gray zone - corroborate with biology / other evidence]
     J -->|"< 0.6"| H
 ```
+
+!!! tip "Worked example: running this checklist on BRCA1"
+    Applying it to the protein from [Try It: A Real Example Protein](../example-protein.md): ~80% of BRCA1 sits below pLDDT 50, so step 1 triages most of it as noise/likely-disordered — matching what's independently known about BRCA1's large IDRs. The one region that clears 70, the C-terminal BRCT domain, is exactly the single dark block in its real PAE plot, so its local fold is trustworthy on its own (step 2). It's a monomer, so steps 3 and 5 (ipTM, cross-model agreement for a complex) simply don't apply here — there's no interface to check.
 
 One more input factor is worth knowing before you trust — or dismiss — a score: see [What Actually Influences a Prediction?](what-influences-a-prediction.md) for why the sequence/MSA matters far more than you might expect, and why a single point mutation rarely moves these numbers the way you'd hope.
 

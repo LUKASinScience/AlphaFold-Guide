@@ -17,7 +17,7 @@ AlphaMissense is a separate DeepMind model — not AlphaFold2 or AlphaFold3 itse
     | 0.334 – 0.564 | Ambiguous |
     | 0.565 – 1.000 | Likely pathogenic |
 
-    ![Blue-to-red AlphaMissense score gradient from 0 to 1, with band boundaries at 0.333 (likely benign / ambiguous) and 0.564 (ambiguous / likely pathogenic)](../assets/images/alphamissense-scale.svg)
+    ![Blue-to-red AlphaMissense score gradient from 0 to 1, with band boundaries at 0.333 (likely benign / ambiguous) and 0.564 (ambiguous / likely pathogenic)](../assets/images/alphamissense-scale.svg){ .af-diagram-svg }
 
     Scale: AlphaMissense scored **89% of all ~71 million possible human missense variants** — compared to roughly 0.1% that had previously been manually classified by human curators. Of the scored variants, 57% were predicted likely benign and 32% likely pathogenic.
 

@@ -13,8 +13,9 @@ A practical guide to protein structure prediction with AlphaFold2, ColabFold and
     If this guide helped your work, citing it helps others find it too:
 
     ```text
-    Bauer, L. (2026). Lukas AlphaFold Guide: A practical guide to AlphaFold2,
+    Bauer, L. W. (2026). Lukas AlphaFold Guide: A practical guide to AlphaFold2,
     ColabFold, AlphaFold3, AlphaMissense and ChopChopMF.
+    https://github.com/LUKASinScience
     ```
 
     Missing something, spotted an error, or have an idea? For the guide itself, corrections and suggestions are welcome — see below once it has a public home. For the tools it covers, report issues or feature ideas directly where they're maintained: [ChopChopMF issues](https://github.com/LUKASinScience/ChopChopMF/issues) · [ChimeraX-FigureStyle issues](https://github.com/LUKASinScience/ChimeraX-FigureStyle/issues).

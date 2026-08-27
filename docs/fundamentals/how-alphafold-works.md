@@ -33,7 +33,7 @@ flowchart LR
 ```
 
 !!! note "What the official 'folding in progress' animation shows"
-    DeepMind's own supplementary materials include a video of the structure visibly settling into shape across recycling iterations — the same loop shown schematically above (Structure module → back into the trunk → refine → repeat). If you want to see what that looks like in motion rather than as a diagram, [this GitHub issue](https://github.com/google-deepmind/alphafold/issues/92) links the animated version from the original AlphaFold Colab notebook.
+    DeepMind's own supplementary materials include a video of the structure visibly settling into shape across recycling iterations — the same loop shown schematically above (Structure module → back into the trunk → refine → repeat). If you want to see what that looks like in motion rather than as a diagram, [this GitHub issue](https://github.com/google-deepmind/alphafold/issues/92) has a user-shared visualization from the original AlphaFold Colab notebook's output.
 
 ## The trunk: Evoformer (AF2) → Pairformer (AF3)
 
@@ -74,6 +74,6 @@ flowchart LR
 ## Compute footprint
 
 !!! tip "Advanced"
-    Original AF2 training used roughly 128 TPUv3 cores (~100–200 GPU-equivalent). Inference is far cheaper — AF2 has run on a single ~20GB GPU or even CPU-only with ~300GB RAM, though it strains a typical laptop. The full AF2 database bundle for MSA/template search is roughly **2.5 TB**, dominated by the ~2TB **BFD** ("Big Fantastic Database"). See [Running ColabFold (local/HPC)](../running-colabfold/hpc-and-local.md) for what this means in practice on a shared cluster.
+    Original AF2 training used roughly 128 TPUv3 cores (~100–200 GPU-equivalent). Inference is far cheaper — AF2 has run on a single ~20GB GPU or even CPU-only with ~300GB RAM, though it strains a typical laptop. The full AF2 database bundle for MSA/template search is roughly **2.6 TB unzipped**, dominated by the ~1.8 TB **BFD** ("Big Fantastic Database"). See [Running ColabFold (local/HPC)](../running-colabfold/hpc-and-local.md) for what this means in practice on a shared cluster.
 
 Continue to [AF2 vs. ColabFold vs. AF3 →](af2-vs-colabfold-vs-af3.md)

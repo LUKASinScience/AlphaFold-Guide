@@ -16,7 +16,7 @@ The primary sources this guide is built from, plus additional reading for anyone
 
 ## Mechanism deep-dives
 
-- [The Illustrated AlphaFold](https://elanapearl.github.io/blog/2024/the-illustrated-alphafold/) — Elana Pearl's detailed, diagram-heavy walkthrough of AlphaFold3's architecture (Pairformer, diffusion module, confidence heads); the single best source for AF3 internals.
+- [The Illustrated AlphaFold](https://elanapearl.github.io/blog/2024/the-illustrated-alphafold/) — Elana Simon's detailed, diagram-heavy walkthrough of AlphaFold3's architecture (Pairformer, diffusion module, confidence heads); the single best source for AF3 internals.
 - [AlphaFold 2 is here: what's behind the structure prediction miracle](https://www.blopig.com/blog/2021/07/alphafold-2-is-here-whats-behind-the-structure-prediction-miracle/) — Oxford Protein Informatics Group's clear explainer of the Evoformer, IPA, and training losses.
 - [Deep Learning for Biology and AlphaFold](https://theaisummer.com/deep-learning-biology-alphafold/) — AI Summer's treatment of the attention mechanisms underlying AF2.
 
@@ -31,7 +31,7 @@ The primary sources this guide is built from, plus additional reading for anyone
 ## AlphaMissense
 
 - Cheng et al., *"Accurate proteome-wide missense variant effect prediction with AlphaMissense,"* Science 381, 2023 (DOI 10.1126/science.adg7492).
-- [AlphaMissense functional-assay correlation benchmark](https://pmc.ncbi.nlm.nih.gov/articles/) (PMC10634779) — comparison against REVEL, PrimateAI-3D and deep mutational scanning data.
+- [AlphaMissense functional-assay correlation benchmark](https://pmc.ncbi.nlm.nih.gov/articles/PMC10634779/) (PMC10634779) — comparison against REVEL, PrimateAI-3D and deep mutational scanning data.
 - [google-deepmind/alphamissense](https://github.com/google-deepmind/alphamissense) — reference code and data-access documentation.
 
 ## Structure homology & Foldseek
@@ -54,6 +54,7 @@ The primary sources this guide is built from, plus additional reading for anyone
 - [From interaction networks to interfaces, scanning intrinsically disordered regions using AlphaFold2](https://www.nature.com/articles/s41467-023-44288-7)
 - [University of Chicago RCC: AlphaFold](https://docs.rcc.uchicago.edu/software/apps-and-envs/alphafold/)
 - [NSC Berzelius: AlphaFold](https://www.nsc.liu.se/support/systems/berzelius-software/berzelius-alphafold/)
+- [Yale YCRC: AlphaFold](https://docs.ycrc.yale.edu/clusters-at-yale/guides/alphafold/)
 - [ASBC: Best practices for presenting AlphaFold models](https://australian-structural-biology-computing.github.io/website/best-practices-alphafold)
 - [ASBC: AlphaFold2 how-to guide](https://australian-structural-biology-computing.github.io/website/AlphaFold2_how_to_guide)
 - [Terwilliger et al., "AlphaFold predictions are valuable hypotheses, and accelerate but do not replace experimental structure determination"](https://www.biorxiv.org/content/10.1101/2022.11.21.517405v2), Nature Methods 2023/2024 — concrete evidence that confidently-predicted regions can still diverge from experimental structures.

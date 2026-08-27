@@ -76,6 +76,21 @@
   margin: .75rem auto;
 }
 
+/* Custom diagram SVGs (white/light-authored artwork) — give them an explicit
+   card frame so they read as an intentional figure rather than a stray white
+   rectangle floating on the dark theme. */
+.md-typeset img.af-diagram-svg {
+  max-width: 480px;
+  width: 100%;
+  background: #fff;
+  border: 1px solid var(--md-default-fg-color--lightest, #ddd);
+  border-radius: .4rem;
+  padding: .75rem;
+  display: block;
+  margin: 1rem auto;
+  box-sizing: border-box;
+}
+
 /* Confidence calculator sliders */
 .af-calc-row { margin: 1rem 0; }
 .af-calc-row label { display: block; margin-bottom: .4rem; font-weight: 600; }
@@ -115,4 +130,23 @@
   object-fit: contain;
   display: block;
   margin: 0 auto;
+}
+
+/* FigureStyle template render (Presenting & Sharing Results page) */
+.af-video-wrap {
+  margin: 1rem auto;
+  max-width: 480px;
+}
+.af-video-wrap video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--md-default-fg-color--lightest, #ddd);
+  border-radius: .4rem;
+}
+.af-video-caption {
+  text-align: center;
+  font-size: .85rem;
+  color: var(--md-default-fg-color--light, #666);
+  margin-top: .5rem;
 }

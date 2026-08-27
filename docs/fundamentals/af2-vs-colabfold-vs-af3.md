@@ -56,7 +56,7 @@ These three names get used loosely and interchangeably, but they answer differen
 
 ??? example "Expert: AlphaFold-Multimer version history"
     - **AF2 v2.1.0 (Nov 2021)**: introduced multi-chain prediction from multi-sequence FASTA files — "AlphaFold-Multimer" as an add-on to the monomer network.
-    - **AF2 v2.2.x**: the `--unicluster30_database_path` flag was renamed to `--uniref30_database_path`, reflecting the Uniclust30 → UniRef30 database rename.
+    - **AF2 v2.3.0**: the `--uniclust30_database_path` flag was renamed to `--uniref30_database_path`, reflecting the Uniclust30 → UniRef30 database rename.
     - **AF2 v2.3.0**: updated Multimer *parameters* (same architecture, new training cutoff of 2021-09-30) — roughly 30% more training data, 4x more cryo-EM structures, 2x more large structures (>2,000 residues); also reduced GPU memory needs for longer proteins.
     - **AlphaFold3**, by contrast, has multimer/multi-molecule support **built into the core architecture from the start** — there's no separate "Multimer mode," since AF3's tokenization and Pairformer/diffusion design natively handle multi-chain, multi-molecule-type inputs.
 

@@ -7,7 +7,7 @@ icon: lucide/atom
 Every confidence-metric explanation in this guide is easier to trust once you've actually seen it on a real structure. Below is a live, interactive [Mol\*](https://molstar.org) viewer loading a real entry straight from the [AlphaFold Protein Structure Database](https://alphafold.ebi.ac.uk) — not a screenshot.
 
 !!! info "Beginner"
-    This is **BRCA1** (UniProt [P38398](https://www.uniprot.org/uniprotkb/P38398)) — the same protein already used as the fetch example on the [AlphaMissense page](interpreting-results/alphamissense.md). It's a genuinely good teaching example, not a cherry-picked pretty one: BRCA1 is a large, famously mostly-**disordered** protein with only a couple of small, well-folded domains (a RING domain near the N-terminus, a tandem BRCT domain at the C-terminus). Drag to rotate, scroll to zoom, and watch how the color maps directly onto what's structured vs. disordered.
+    This is **BRCA1** (UniProt [P38398](https://www.uniprot.org/uniprotkb/P38398)) — the same protein already used as the AlphaMissense-mapping fetch example in [ChopChopMF Workflows](chopchopmf/workflows.md#2-is-this-variant-likely-pathogenic-alphamissense-mapping). It's a genuinely good teaching example, not a cherry-picked pretty one: BRCA1 is a large, famously mostly-**disordered** protein with only a couple of small, well-folded domains (a RING domain near the N-terminus, a tandem BRCT domain at the C-terminus). Drag to rotate, scroll to zoom, and watch how the color maps directly onto what's structured vs. disordered.
 
 <div class="af-viewer-wrap" markdown="0">
   <div id="af-molstar-app" class="af-viewer"></div>
@@ -30,6 +30,8 @@ Every confidence-metric explanation in this guide is easier to trust once you've
     ![Real Predicted Aligned Error plot for BRCA1 (P38398) from AlphaFold DB, showing a small confident dark block at the C-terminal BRCT domain against an otherwise uniformly light, low-confidence background](assets/images/brca1-pae.png){ .af-pae-img }
 
     Notice the single small dark block near the bottom-right corner — that's the folded BRCT domain. Everywhere else is light: no confident *relative* positioning, consistent with a long, floppy disordered chain. Exactly the [PAE](interpreting-results/confidence-metrics.md#pae-predicted-aligned-error) lesson: pLDDT and PAE are telling the same story here from two different angles.
+
+    That same BRCT domain is also the worked example for cropping a real rigid domain before a Foldseek search — see [Structure vs. Sequence Homology](fundamentals/structure-vs-sequence-homology.md#the-practical-workflow).
 
 !!! note "Data source & license"
     Structure and confidence data fetched live from the [AlphaFold Protein Structure Database](https://alphafold.ebi.ac.uk) (EMBL-EBI / DeepMind), available under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/). Viewer: [Mol\*](https://molstar.org) (MIT license), self-hosted with this guide — no external viewer service or account needed, though the structure data itself is fetched from AlphaFold DB when this page loads.
@@ -100,6 +102,9 @@ Every confidence-metric explanation in this guide is easier to trust once you've
         pdbProvider: 'rcsb',
         emdbProvider: 'rcsb',
       }).then(function (viewer) {
+        if (viewer.plugin && viewer.plugin.canvas3d) {
+          viewer.plugin.canvas3d.setProps({ renderer: { backgroundColor: 0x0d1117 } });
+        }
         viewer.loadAlphaFoldDb('P38398');
       });
     });

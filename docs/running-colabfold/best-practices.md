@@ -47,4 +47,20 @@ Before even looking at the 3D structure, check the **sequence coverage / MSA dep
 
 See also: [Confidence Metrics](../interpreting-results/confidence-metrics.md) for what pLDDT/PAE/ipTM actually measure, and [ChopChopMF Workflows](../chopchopmf/workflows.md) for generating these views interactively in ChimeraX.
 
+## Correct isn't the whole job — it should also be legible
+
+Everything above this point is about getting the science right. But a figure also has to actually get *looked at* closely, and a cluttered or inconsistently-styled one works against that — presentation quality isn't cosmetic, it's part of communicating the result.
+
+!!! tip "Advanced: found a look you like? Save it as a template"
+    Once you've dialed in lighting, cartoon style, coloring (including AlphaFold pLDDT), and export settings for one structure in ChimeraX, there's no need to redo all of that by hand for every figure in a paper. [FigureStyle](../visualization-tools.md#two-plugins-this-guide-relies-on) saves that exact setup as a named, reusable template — apply it to any other structure with one click, and every figure in the paper gets identical, reproducible styling instead of drifting slightly each time you re-tune the display.
+
+    <div class="af-video-wrap" markdown="0">
+      <video controls muted loop playsinline poster="/assets/images/figurestyle-render-poster.png">
+        <source src="../assets/videos/figurestyle-template-render.mp4" type="video/mp4">
+      </video>
+      <p class="af-video-caption">A FigureStyle template applied in ChimeraX: pLDDT-colored, cel-shaded cartoon with outlines on a white background, plus the confidence color key baked into the render.</p>
+    </div>
+
+    See the [full plugin card](../visualization-tools.md#two-plugins-this-guide-relies-on) for FigureStyle's coloring modes and export options, or its [docs](https://lukasinscience.github.io/ChimeraX-FigureStyle/) and [GitHub](https://github.com/LUKASinScience/ChimeraX-FigureStyle).
+
 Continue to [Visualization Tools →](../visualization-tools.md)

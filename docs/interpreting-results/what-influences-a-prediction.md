@@ -6,7 +6,7 @@ icon: lucide/sliders-horizontal
 
 Now that you can read pLDDT and PAE (see [Confidence Metrics](confidence-metrics.md)), a natural next question is: what, in the *input*, actually moves those numbers and the resulting structure? The honest answer surprises a lot of people coming from a classic "sequence → structure" mental model.
 
-![Illustrative bar chart showing MSA/sequence context as the dominant influence on predicted structure, structural templates as medium influence, and a single point mutation as usually low structural influence but a possible pLDDT shift](../assets/images/prediction-influence.svg)
+![Illustrative bar chart showing MSA/sequence context as the dominant influence on predicted structure, structural templates as medium influence, and a single point mutation as usually low structural influence but a possible pLDDT shift](../assets/images/prediction-influence.svg){ .af-diagram-svg }
 
 ## The ranking
 
@@ -52,7 +52,7 @@ Now that you can read pLDDT and PAE (see [Confidence Metrics](confidence-metrics
 !!! tip "Advanced summary"
     - Changing the **MSA** (different depth, different database, added/removed homologs) will move a prediction far more than changing **one residue** in the query sequence.
     - Don't run "mutant vs. wild-type" AlphaFold2 predictions expecting the backbone or pLDDT to reliably reveal whether a mutation is damaging — that's not what the pLDDT number was trained to measure, and case studies show it often fails at this specific task.
-    - If your actual question is "*is this variant pathogenic?*", reach for [AlphaMissense](alphamissense.md) — a model specifically trained for that question — rather than reading tea leaves from a raw structure prediction.
+    - If your actual question is "*is this variant pathogenic?*", reach for [AlphaMissense](alphamissense.md) — a model specifically trained for that question — rather than reading tea leaves from a raw structure prediction. BRCA1, the protein used as the running example throughout this guide, is a case in point: it's one of the genes AlphaMissense was specifically benchmarked on and performed best on — precisely the kind of judgment raw AlphaFold2 pLDDT was never trained to make.
     - If you need a PTM to actually influence the model, you need **AlphaFold3**, not AlphaFold2/ColabFold.
 
 Continue to [AlphaMissense →](alphamissense.md)
