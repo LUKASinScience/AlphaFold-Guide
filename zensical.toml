@@ -1,13 +1,13 @@
 [project]
-site_url = "https://www.example.com/"
+site_url = "https://lukasinscience.github.io/AlphaFold-Guide/"
 site_name = "Lukas AlphaFold Guide"
 site_description = "A practical, beginner-to-expert guide to AlphaFold2, ColabFold, AlphaFold3, AlphaMissense and ChopChopMF."
-# site_author = "Your name"
+site_author = "Lukas W. Bauer"
 
-# copyright = "Copyright &copy; 2026 Your name"
+copyright = "Copyright &copy; 2026 Lukas W. Bauer"
 
-# repo_url = "https://github.com/user/repo"
-# repo_name = "user/repo"
+repo_url = "https://github.com/LUKASinScience/AlphaFold-Guide"
+repo_name = "LUKASinScience/AlphaFold-Guide"
 # edit_uri = "edit/main/docs/"
 
 nav = [
